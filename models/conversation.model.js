@@ -7,9 +7,9 @@ export class conversation extends Model { }
 conversation.init({
     id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
+        primaryKey:true,
+        autoIncrement: true,
+        allowNull:false,
     },
     from_id: {
         type: DataTypes.INTEGER,

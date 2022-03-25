@@ -14,10 +14,9 @@ dotenv.config();
 class App{
 
 app = express.application;
-//routes= new Routes();
 db = new Database();
 socket = new SocketIo();
-http = null;
+Http = null;
 
 
   constructor() {

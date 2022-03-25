@@ -10,7 +10,6 @@ UserModel.init({
         primaryKey: true,
         comment: "null",
         autoIncrement: true
-
     },
     username: {
         type: DataTypes.STRING
@@ -18,11 +17,20 @@ UserModel.init({
     password: {
         type: DataTypes.STRING
     },
-    name: {
-        type: DataTypes.STRING
+    socket_id:{
+        type:  DataTypes.STRING
+    },
+    createdAt: {
+        type: DataTypes.INTEGER
+    },
+    updatedAt: {
+        type: DataTypes.INTEGER
     },
     email: {
         type: DataTypes.STRING
+    },
+    online: {
+        type: DataTypes.BOOLEAN
     }
 }, {
     sequelize:database,

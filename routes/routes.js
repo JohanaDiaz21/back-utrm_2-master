@@ -6,15 +6,10 @@ import {userController} from "../controllers/user.controller.js";
     routes(app= express.application){
         //aqui declaran todas las rutas
 
-        app.get( '/', ( req, res ) => {
-            res.send( "Hola Mundo!" );
-        });
 
-        app.get('/say-hello',userController.sayhello);
+        app.get('/',(req,res)=>res.send("uwu"))
         app.post('/get-users',userController.getUsers);
         app.post('/api/login',userController.getUsers);
-        //app.get('/getUsers',userController.getUsers);
-        //app.get('/getUsers',userController.getUsers);
         app.post('/api/load-conversation',userController.loadConversation);
         app.post('/api/save-message',userController.saveMessage);
         app.post('/api/create-user',userController.createUser);

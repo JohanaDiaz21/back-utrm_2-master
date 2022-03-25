@@ -6,13 +6,6 @@ import { Op } from 'sequelize'
 
 class UserController {
 
-    async sayhello(request, response) {
-        return response.status(200).json({
-            ok: true,
-            message: 'hello'
-        });
-    }
-
     async createUser(request, response) {
         const user = request.body
         try {
@@ -32,32 +25,17 @@ class UserController {
     }
 
     async getUsers(request, response) {
-        //try {
         const body = request.body;
         const users = await UserModel.findAll({
             where: body.condition
-            //logging:console.log
         });
         if (users.length > 0) {
             const user = users[0]
             response.status(200).json({ok: true, user});
         } else {
-            response.status(200).json({ok: false, message: 'user not found'});
+            response.status(200).json({ok: false, message: 'Usuario no encontrado'});
         }
     }
-
-    //return response.status(200).json({
-    // ok: true,
-    //data: users
-    //});
-    //} catch (e) {
-    //return response.status(500).json({
-    //  ok: false,
-    // error: e
-    // })
-
-    // }
-
     async loadConversation(request, response) {
         const body = request.body;
         const sender = body.sender;

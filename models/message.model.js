@@ -6,13 +6,13 @@ export class messages extends Model { }
 messages.init({
     id: {
         type: DataTypes.INTEGER.UNSIGNED,
-        allowNull: false,
-        primaryKey: true,
-        comment: 'null',
-        autoIncrement: true
+        allowNull:false,
+        primaryKey:true,
+        comment: "null",
+        autoIncrement:true
     },
     conversation_uuid: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: true
     },
 
@@ -25,7 +25,7 @@ messages.init({
         allowNull: true
     },
     created_at: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: true
     }
 }, {
